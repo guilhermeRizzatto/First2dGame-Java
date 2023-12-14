@@ -30,21 +30,21 @@ public class Player extends Entity {
     }
 
     public void update() {
-        if (keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.rightPressed == true) {
+        if (keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed) {
 
-            if (keyH.upPressed == true) {
+            if (keyH.upPressed) {
                 hasSprite3 = true;
                 direction = "up";
                 y -= speed;
-            } else if (keyH.downPressed == true) {
+            } else if (keyH.downPressed) {
                 hasSprite3 = true;
                 direction = "down";
                 y += speed;
-            } else if (keyH.leftPressed == true) {
+            } else if (keyH.leftPressed) {
                 hasSprite3 = false;
                 direction = "left";
                 x -= speed;
-            } else if (keyH.rightPressed == true) {
+            } else if (keyH.rightPressed) {
                 hasSprite3 = false;
                 direction = "right";
                 x += speed;
@@ -54,9 +54,9 @@ public class Player extends Entity {
             if (spriteCounter > 10) {
                 if (spriteNum == 1) {
                     spriteNum = 2;
-                } else if (spriteNum == 2 && hasSprite3 == true) {
+                } else if (spriteNum == 2 && hasSprite3) {
                     spriteNum = 3;
-                } else if (spriteNum == 2 && hasSprite3 == false){
+                } else if (spriteNum == 2 && !hasSprite3){
                     spriteNum = 1;
                 } else if (spriteNum == 3) {
                     spriteNum = 1;

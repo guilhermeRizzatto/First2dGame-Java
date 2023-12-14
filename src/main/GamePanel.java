@@ -78,7 +78,6 @@ public class GamePanel extends JPanel implements Runnable {
 				timer = 0;
 			}
 		}
-
 	}
 
 	public void update() {
